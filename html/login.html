@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login — Vega Producciones</title>
+<link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="login-body">
+<main class="login-container" role="main">
+<section class="login-card" aria-labelledby="titleLogin">
+<h1 id="titleLogin">Acceso</h1>
+<p class="meta">Demo educativa — no se conecta a un servidor real.</p>
+
+
+<form id="loginForm" novalidate>
+<div class="field">
+<label class="label" for="email">Correo</label>
+<div class="control">
+<input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="username" required aria-invalid="false" />
+</div>
+<p class="error" id="emailError" role="alert" aria-live="polite"></p>
+</div>
+
+
+<div class="field">
+<div class="row space-between">
+<label class="label" for="password">Contraseña</label>
+<a href="#" class="hint" onclick="alert('Recuperación de contraseña — pendiente');return false;">¿Olvidaste tu contraseña?</a>
+</div>
+<div class="control">
+<input id="password" name="password" type="password" placeholder="••••••••" minlength="6" autocomplete="current-password" required aria-invalid="false" />
+<button class="toggle-pass" type="button" aria-label="Mostrar u ocultar contraseña">👁️</button>
+</div>
+<p class="error" id="passwordError" role="alert" aria-live="polite"></p>
+</div>
+
+
+<div class="row space-between wrap">
+<label><input id="remember" type="checkbox" /> Recuérdame</label>
+<a href="./index.html" class="hint">Volver al sitio</a>
+</div>
+
+
+<button class="btn primary" type="submit">Entrar</button>
+<div class="success" id="successMsg">✅ Sesión simulada OK. (Luego redirigiremos al dashboard)</div>
+
+
+<div class="divider">o continúa con</div>
+<button class="btn ghost" type="button" onclick="alert('OAuth se agregará después');">Google / Facebook</button>
+</form>
+</section>
+</main>
+
+
+<script src="./js/auth.js"></script>
+</body>
+</html>
